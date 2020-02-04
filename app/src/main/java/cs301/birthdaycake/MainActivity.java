@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,10 +18,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         CakeView cv = findViewById(R.id.cakeview);
         CakeController cc = new CakeController(cv);
-        //Button button = findViewById(R.id.blow_out);
-        //button.setOnClickListener(cc);
+        Button button = findViewById(R.id.blow_out);
+        button.setOnClickListener(cc);
         Switch witch = findViewById(R.id.candles);
         witch.setOnCheckedChangeListener(cc);
+        SeekBar seekBar = findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(cc);
     }
     public void goodbye(View button) {
         Log.i("cakeview","CakeView");
