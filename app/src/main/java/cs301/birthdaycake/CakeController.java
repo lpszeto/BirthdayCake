@@ -2,8 +2,9 @@ package cs301.birthdaycake;
 
 import android.util.Log;
 import android.view.View;
+import android.*;
 
-public class CakeController {
+public class CakeController implements View.OnClickListener{
     private CakeView cv;
     private CakeModel cm;
     public CakeController(CakeView tempcv){
@@ -11,8 +12,10 @@ public class CakeController {
         cm = tempcv.getCakeModel();
     }
     public void onClick(View v){
-        Log.d("button","Click");
-        Log.d("button2","Click2");
+        cm.lit = false;
+        cv.invalidate();
+        Log.d("goodbye","Bye");
+        Log.d("blow_out","Blow Out");
     }
 
 }

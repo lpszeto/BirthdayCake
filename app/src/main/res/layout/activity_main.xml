@@ -110,13 +110,13 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/blow_out"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Blow out" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/goodbye"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="goodbye"
